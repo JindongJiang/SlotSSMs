@@ -18,7 +18,7 @@ By adopting SSMs at its core, SlotSSMs inherit their strengths: parallelizable t
 
 
 <p align="center">
-  <img src="assets/method.png" width="90%" alt="SlotSSM Method Overview" />
+  <img src="assets/method.png" width="100%" alt="SlotSSM Method Overview" />
 </p>
 
 
@@ -26,11 +26,11 @@ In our experiments, we evaluate SlotSSMs in long-context video understanding, vi
 <!-- This demonstrates that SlotSSM is able to utilize the modular representations to discover and exploit the latent structure of the input to complete the task, while the SAVi++ baseline does not demonstrate the same level of emergent modularity. -->
 
 <div align="center">
-  <img src="assets/gifs/tiktok/slotssm/mask_and_depth.gif" alt="Video Decomposition on TikTok Dataset" width="100%" />
+  <img src="assets/gifs/tiktok/slotssm/mask_and_depth.gif" alt="Video Decomposition on TikTok Dataset" width="90%" />
   <p style="font-size: 18px; margin-bottom: 5px;">TikTok Dataset</p>
-  <img src="assets/gifs/waymo/slotssm/mask_and_depth.gif" alt="Video Decomposition on Waymo Dataset" width="100%" />
+  <img src="assets/gifs/waymo/slotssm/mask_and_depth.gif" alt="Video Decomposition on Waymo Dataset" width="90%" />
   <p style="font-size: 18px; margin-bottom: 5px;">Waymo Dataset</p>
-  <img src="assets/gifs/egtea/slotssm/mask_and_depth.gif" alt="Video Decomposition on UT Egocentric Dataset" width="100%" />
+  <img src="assets/gifs/egtea/slotssm/mask_and_depth.gif" alt="Video Decomposition on UT Egocentric Dataset" width="90%" />
   <p style="font-size: 18px; margin-bottom: 5px;">UT Egocentric Dataset</p>
   <!-- <p style="font-size: 16pt; margin-top: 0px;">
     <strong>Emergent Scene Decomposition from Depth Estimation Tasks.</strong> Colors represent the ID of slots used for predicting each position.
