@@ -32,10 +32,10 @@ In our experiments, we evaluate SlotSSMs in long-context video understanding, vi
   <p style="font-size: 18px; margin-bottom: 5px;">Waymo Dataset</p>
   <img src="assets/gifs/egtea/slotssm/mask_and_depth.gif" alt="Video Decomposition on UT Egocentric Dataset" width="90%" />
   <p style="font-size: 18px; margin-bottom: 5px;">UT Egocentric Dataset</p>
-  <!-- <p style="font-size: 16pt; margin-top: 0px;">
+  <p style="font-size: 16pt; margin-top: 0px;">
     <strong>Emergent Scene Decomposition from Depth Estimation Tasks.</strong> Colors represent the ID of slots used for predicting each position.
     SlotSSM is capable of exploiting the inherent modular structure of real-world videos for efficient inference, without explicit segmentation supervision.
-  </p> -->
+  </p>
 </div>
 
 ## Repository Overview
