@@ -12,9 +12,7 @@ This is the official PyTorch implementation of **SlotSSMs** presented in the pap
 
 ## Highlights
 
-<!-- This work proposes SlotSSMs, an efficient and powerful framework for video understanding. SlotSSMs incorporate independent mechanisms into SSMs (Mamba) to preserve or encourage separation of information for each entity in the scene, thereby improving visual reasoning. Unlike conventional SSMs that maintain a monolithic state vector, SlotSSMs maintain a set of modular states whose **dynamics are designed to be independent in time**, with **interactions modeled through self-attention in space**.  -->
-
-SlotSSMs propose an efficient and powerful framework for video understanding by incorporating independent mechanisms into State Space Models (SSMs) to encourage separation of information for each entity in a scene, thereby improving visual reasoning. Unlike conventional SSMs that maintain a monolithic state vector, SlotSSMs maintain a set of modular states whose **dynamics are designed to be independent in time**, with **interactions modeled through self-attention in space**.
+SlotSSMs propose an efficient and powerful framework for video understanding by incorporating independent mechanisms into State Space Models (SSMs), such as Mamba, to encourage separation of information for each entity in a scene, thereby improving visual reasoning. Unlike conventional SSMs that maintain a monolithic state vector, SlotSSMs maintain a set of modular states whose **dynamics are designed to be independent in time**, with **interactions modeled through self-attention in space**.
 
 By adopting SSMs at its core, SlotSSMs inherit their strengths: parallelizable training, memory efficiency, and long-range reasoning capabilities, giving it an advantage over methods based on RNNs and Transformers.
 
@@ -24,7 +22,6 @@ By adopting SSMs at its core, SlotSSMs inherit their strengths: parallelizable t
 </p>
 
 
-<!-- In experiments, we evaluate our model in long-context video understanding, video prediction, object-centric learning, 3D visual reasoning, and more. Here, we show qualitative results of the depth prediction task to showcase the **emerging modularity** in SlotSSMs for real-world video inputs.  -->
 In our experiments, we evaluate SlotSSMs in long-context video understanding, video prediction, object-centric learning, 3D visual reasoning, and more. Below, we show qualitative results of the depth prediction task to showcase the **emerging modularity** in SlotSSMs for real-world video inputs.
 <!-- This demonstrates that SlotSSM is able to utilize the modular representations to discover and exploit the latent structure of the input to complete the task, while the SAVi++ baseline does not demonstrate the same level of emergent modularity. -->
 
