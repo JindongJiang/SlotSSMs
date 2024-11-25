@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*$py.class
+
+
+# Pycharm
+.idea/*
+
+# results dir
+/results
+/files
+
+logs/
+log/
+wandb/
+*.DS_Store
+.ipynb_checkpoints/
+*.icloud
+.vscode/
+
+# data dir
+/data
+
+# weights
+*.pkl
+*.pt
+*.bin
+*.pth
+
+/outputs
+/examples
+/images
+
+/*.txt
