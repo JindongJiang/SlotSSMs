@@ -12,7 +12,7 @@ This is the official PyTorch implementation of **SlotSSMs** presented in the pap
 
 ## Highlights
 
-SlotSSMs propose an efficient and powerful framework for video understanding by incorporating independent mechanisms into State Space Models (SSMs), such as Mamba, to encourage separation of information for each entity in a scene, thereby improving visual reasoning. Unlike conventional SSMs that maintain a monolithic state vector, SlotSSMs maintain a set of modular states whose **dynamics are designed to be independent in time**, with **interactions modeled through self-attention in space**.
+SlotSSMs propose an efficient and powerful framework for video understanding by incorporating independent mechanisms into State Space Models (SSMs), such as [Mamba](https://arxiv.org/abs/2312.00752), to encourage separation of information for each entity in a scene, thereby improving visual reasoning. Unlike conventional SSMs that maintain a monolithic state vector, SlotSSMs maintain a set of modular states whose **dynamics are designed to be independent in time**, with **interactions modeled through self-attention in space**.
 
 By adopting SSMs at its core, SlotSSMs inherit their strengths: parallelizable training, memory efficiency, and long-range reasoning capabilities, giving it an advantage over methods based on RNNs and Transformers.
 
