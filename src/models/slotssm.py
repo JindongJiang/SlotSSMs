@@ -266,7 +266,7 @@ if __name__ == "__main__":
 
     ref = torch.randn(2, 10, 448, 1024).to(device)
 
-    # we support inference time sequential processing, please initialize and pass a MambaCache into the slotsmm module
+    # we support inference time sequential processing, please initialize and pass a MambaCache into the slotssm module
     cache_params = MambaCache()
 
     with torch.amp.autocast(device_type=device, dtype=dtype):
