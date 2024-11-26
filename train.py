@@ -34,7 +34,7 @@ def parse_args():
     parser.add_argument("--num_channels", type=int, default=3)
     parser.add_argument("--num_encoder_layers", type=int, default=6)
     parser.add_argument("--num_decoder_layers", type=int, default=4)
-    parser.add_argument("--num_heads", type=int, default=8)
+    # parser.add_argument("--num_heads", type=int, default=8)
     parser.add_argument("--num_ssm_blocks", type=int, default=4)
     
     # Training hyperparameters
@@ -96,7 +96,7 @@ def main():
         num_channels=args.num_channels,
         hidden_size=args.d_model,
         num_hidden_layers=args.num_encoder_layers,
-        num_attention_heads=args.num_heads,
+        num_attention_heads=args.d_model // 64, # 64 dim per head
         output_dim=args.d_model
     )
 
@@ -104,7 +104,7 @@ def main():
         input_size=args.d_model,
         hidden_size=args.d_model,
         num_hidden_layers=args.num_decoder_layers,
-        num_attention_heads=args.num_heads,
+        num_attention_heads=args.d_model // 64,
         image_size=args.image_size,
         patch_size=args.patch_size,
         num_channels=args.num_channels,
@@ -117,11 +117,11 @@ def main():
         num_slots=args.num_slots,
         num_blocks=args.num_ssm_blocks,
         d_model=args.d_model,
-        use_cross_attn=True,
-        space_attn_num_heads=args.d_model // 64,
+        use_cross_attn=True, # in this example, we use cross attn every layer, similar to perceiver
+        space_attn_num_heads=args.d_model // 64, 
         input_d_model=args.d_model,
-        use_inverted_attention=True,
-        encoder_attn_num_heads=args.d_model // 64
+        use_inverted_attention=True, # inverted attn seems less flexible, but it actually works better in multi-object video reasoning
+        encoder_attn_num_heads=1 # we use 1 here for inverted attn to encourage object segmentation in encoding process
     )
     slotssm = SlotSSM(slotssm_config)
 
@@ -317,5 +317,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# CUDA_VISIBLE_DEVICES=2 accelerate launch --num_processes=1 --main_process_port 29510 release/train.py --train_data_path /data/local/jindong/Datasets/clevrer \
-# --resume_from_checkpoint /common/users/jj691/Documents/Programs/PyTorch/slot-ssm/outputs/checkpoint-10
+# CUDA_VISIBLE_DEVICES=2 accelerate launch --num_processes=1 --main_process_port 29510 release/train.py --train_data_path /path-to-datasets/clevrer \
+# --resume_from_checkpoint /path-to-outputs/checkpoint-10
