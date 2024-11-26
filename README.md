@@ -3,7 +3,7 @@ This is the official PyTorch implementation of **SlotSSMs** presented in the pap
 
 > [SlotSSMs: Slot State Space Models](https://arxiv.org/abs/2406.12272)   
 > *[Jindong Jiang](https://jindongjiang.me/), [Fei Deng](https://scholar.google.com/citations?hl=en&user=F-V72fUAAAAJ&view_op=list_works&sortby=pubdate), [Gautam Singh](https://singhgautam.github.io/), [Minseung Lee](https://mlml.kaist.ac.kr/9b335270-f27b-477b-85ea-0bcaacdbc539), [Sungjin Ahn](https://mlml.kaist.ac.kr/sungjinahn)*   
-> **NeurIPS 2024**   
+> 🌟 **NeurIPS 2024** 🌟  
 > [Project page](https://slotssms.github.io/): https://slotssms.github.io/    
 > [NeurIPS Submission](https://openreview.net/forum?id=BJv1t4XNJW): https://openreview.net/forum?id=BJv1t4XNJW
 
