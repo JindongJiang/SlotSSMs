@@ -19,6 +19,9 @@ By adopting SSMs at its core, SlotSSMs inherit their strengths: parallelizable t
 
 <p align="center">
   <img src="assets/method.png" width="100%" alt="SlotSSM Method Overview" />
+  <p style="font-size: 16pt; margin-top: 0px;">
+    <strong>SlotSSMs vs existing models.</strong> (a) SlotSSMs incorporate modularity through independent state transitions and sparse interactions via self-attention. (b) Traditional SSMs utilize a monolithic state vector for all past information. (c) Multi-slot Transformer-based models offer modularity but with high computational complexity. (d) Multi-slot RNN-based models have modular states but can't parallelize training (red lock). SlotSSMs combine parallelizable training, memory efficiency, and modularity for efficient temporal modeling.
+  </p>
 </p>
 
 
