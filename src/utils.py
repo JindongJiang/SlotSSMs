@@ -1,6 +1,7 @@
 import os
 import torch.distributed as dist
 
+# adopted from VILA: https://github.com/NVlabs/VILA/blob/ec7fb2c264920bf004fd9fa37f1ec36ea0942db5/llava/train/utils.py#L42
 def mprint(msg):
     rank = int(os.environ.get("RANK", 0))
     world_size = int(os.environ.get("WORLD_SIZE", 1))
