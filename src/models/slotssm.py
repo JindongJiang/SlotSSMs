@@ -11,7 +11,7 @@ from mamba.mamba_ssm import Mamba, Mamba2
 from flash_attn.modules.mha import MHA as FlashMHA
 
 from src.utils import mprint
-from module import MultiHeadAttention
+from .module import MultiHeadAttention
 
 @dataclass
 class MambaCache:

@@ -1,6 +1,4 @@
 import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import torch
 from torch import nn
 from dataclasses import dataclass
@@ -10,7 +8,7 @@ from transformers.modeling_utils import PreTrainedModel, ModelOutput
 from transformers.configuration_utils import PretrainedConfig
 from einops import repeat, rearrange, reduce
 
-from encoder import get_2d_sincos_pos_embed
+from .encoder import get_2d_sincos_pos_embed
 
 class CartesianPositionalEmbedding(nn.Module):
     def __init__(self, channels, image_size):

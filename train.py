@@ -1,7 +1,4 @@
 import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 import argparse
 import torch
 import torch.nn as nn
@@ -15,10 +12,10 @@ import math
 from tqdm.auto import tqdm
 from pathlib import Path
 
-from encoder import VitEncoder, VitEncoderConfig
-from decoder import VitDecoder, VitDecoderConfig
+from src.models.encoder import VitEncoder, VitEncoderConfig
+from src.models.decoder import VitDecoder, VitDecoderConfig
 from src.data.data import VideoDataset
-from slotssm import SlotSSM, SlotSSMConfig
+from src.models.slotssm import SlotSSM, SlotSSMConfig
 
 logger = get_logger(__name__)
 
