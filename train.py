@@ -211,7 +211,6 @@ def main():
     # Initialize training variables
     global_step = 0
     first_epoch = 0
-    accumulate_steps = 0
     # Resume from checkpoint if specified
     if args.resume_from_checkpoint is not None and os.path.exists(args.resume_from_checkpoint):
 
@@ -232,7 +231,6 @@ def main():
             first_epoch = global_step // num_update_steps_per_epoch
 
         initial_global_step = global_step
-        accumulate_steps = global_step * args.gradient_accumulation_steps
     else:
         initial_global_step = 0
 
@@ -299,8 +297,6 @@ def main():
                         checkpoint_dir = os.path.join(args.output_dir, f"checkpoint_step_{global_step}")
                         accelerator.save_state(checkpoint_dir)
                         accelerator.print(f"Successfully saved checkpoint at step {global_step}")
-            
-            accumulate_steps += 1
             
             if global_step >= args.max_train_steps:
                 break

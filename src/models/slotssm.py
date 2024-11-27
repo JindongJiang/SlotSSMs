@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 
 from transformers.configuration_utils import PretrainedConfig
 from transformers.modeling_utils import ModelOutput, PreTrainedModel
-from mamba.mamba_ssm import Mamba, Mamba2
+from mamba_ssm import Mamba, Mamba2
 from flash_attn.modules.mha import MHA as FlashMHA
 
 from src.utils import mprint

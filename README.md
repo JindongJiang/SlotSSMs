@@ -92,7 +92,7 @@ pip install git+https://github.com/state-spaces/mamba
 
 Other packages are installed using the following command.
 ```bash
-pip install transformer accelerate decord
+pip install transformers accelerate decord
 ```
 
 ### Preparing Data
@@ -113,8 +113,8 @@ After setting up the environment and preparing the data, you can train the model
 For systems with limited GPU memory, adjust the `gradient_accumulation_steps` and `batch_size`. The actually batch size would be `gradient_accumulation_steps x num_processes x batch_size`. You may also use mixed precision training to save memory.
 
 ```bash
-CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch --multi_gpu --num_processes=4 --main_process_port 29500 train.py \
---seq_len 16 --train_data_path /path/to/your/dataset --mixed_precision fp16
+CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch --multi_gpu --num_processes=4 --main_process_port 29500 train.py --seq_len 16 \
+--train_data_path /path/to/your/dataset --mixed_precision fp16 --gradient_accumulation_steps 1 --batch_size 8
 ```
 
 ## Citation
