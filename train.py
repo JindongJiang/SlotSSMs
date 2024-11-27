@@ -48,7 +48,7 @@ def parse_args():
     parser.add_argument("--train_data_path", type=str, required=True, default="/path-to-your-dataset")
     parser.add_argument("--output_dir", type=str, default="outputs")
     parser.add_argument("--eval_steps", type=int, default=1000)
-    parser.add_argument("--save_steps", type=int, default=10)
+    parser.add_argument("--save_steps", type=int, default=1000)
     parser.add_argument("--logging_steps", type=int, default=100)
     parser.add_argument("--mixed_precision", type=str, default="fp16", choices=["no", "fp16", "bf16"])
     parser.add_argument("--resume_from_checkpoint", type=str, default=None)

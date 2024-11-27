@@ -11,6 +11,8 @@ pip install torch torchvision torchaudio
 
 pip install flash-attn --no-build-isolation
 
-pip install transformer accelerate decord causal-conv1d==1.4.0
+pip install transformer accelerate decord
+
+pip install git+https://github.com/Dao-AILab/causal-conv1d
 
 pip install git+https://github.com/state-spaces/mamba
