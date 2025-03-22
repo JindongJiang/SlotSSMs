@@ -122,10 +122,13 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch --multi_gpu --num_processes=4 --m
 If you find this code useful for your research, please cite our paper with the following BibTeX entry
 
 ```
-@article{jiang2024slot,
-  title={Slot State Space Models},
-  author={Jiang, Jindong and Deng, Fei and Singh, Gautam and Lee, Minseung and Ahn, Sungjin},
-  journal={NeurIPS},
-  year={2024}
-}
+@inproceedings{jiang2024slot,
+    title = {Slot State Space Models},
+    author = {Jiang, Jindong and Deng, Fei and Singh, Gautam and Lee, Minseung and Ahn, Sungjin},
+    booktitle = {Advances in Neural Information Processing Systems},
+    pages = {11602--11633},
+    url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/158ac5698e36a01ee5ca9e6732685b34-Paper-Conference.pdf},
+    volume = {37},
+    year = {2024}
+  }
 ```
